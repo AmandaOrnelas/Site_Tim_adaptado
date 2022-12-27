@@ -62,12 +62,9 @@ h2 {
 }*/
 
 .myNavbar{
-    position:sticky; /* Indica que a barra de menu ficará fixada onde for colocada.
-    Nesse caso, ela estará sempre no topo da tela, mesmo se você rolar a página */
-    top: 0; /* Indica que irá começar do topo da tela*/
-    z-index: 9999; /* Indica que estará sempre por cima dos outros elementos. Quando
-rolamos a página, outras imagens e elementos podem aparecer e nós não
-queremos que eles fiquem por cima da barra.*/
+    position:sticky; 
+    top: 0;
+    z-index: 9999; 
 }
 
 .links{
@@ -85,7 +82,13 @@ a {
     text-decoration: none;
 }
 
-/*ACRESCENTAR: */
+
 .videos iframe{
     width: 80%;
+}
+
+.parallax-container {
+
+    display: table-cell;
+    vertical-align: middle;
 }
