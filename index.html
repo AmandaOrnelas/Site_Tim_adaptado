@@ -1,6 +1,20 @@
 <html>
 
 <head>
+	<meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--  viewport (janela de visualização) -->
+        <!-- width=device-width: define a largura da página para seguir a largura da tela do dispositivo-->
+        <!-- initial-scale=1: define o nível de zoom inicial quando a página é carregada pela 1º vez pelo navegador -->
+    
+    <!--BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
+    
+    <!-- JAVASCRIPT: scripts que adicionam algumas funções ao website, como pop-up, avisos, animações e etc. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
 	<title>Sir Tim Berners-Lee</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -8,7 +22,41 @@
 
 <body>
 
-	<ul class="menu">
+	<!-- navbar-inverse é uma propriedade bootstrap CSS. Nós a usamos chamando-a dentro
+da classe (class) do elemento; é usado para dispor uma barra de menu com uma cor de
+plano de fundo e uma cor de fonte -->
+    <nav class="navbar-inverse myNavbar"> <!--<nav> é usada para conter todos os itens do menu dentro dele-->
+        <div class="navbar-header"> <!--É uma propriedade bootstrap CSS e nós a usamos chamando-a dentro da classe do elemento-->
+<!-- O navbar-header é, na maioria das vezes, uma classe estrutural para o Bootstrap navbar. Ele
+realoca aproximadamente 150px para a esquerda do navbar para enquadrar o navbar-brand.
+Mas a propriedade mais útil do navbar-header é sua adaptação de 100% em larguras até 768px
+(tela de tablets). Também nos auxilia a colocar itens no lado esquerdo da barra.-->
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<!-- navbar-toggle é o boão de 3 linhas que aparece no smartphone-->
+			<!--data-toggle="collapse" Indica que algo será aberto quando o botão for clicado-->
+			<!-- data-target="#myNavbar" Indica que quando o botão for clicado tanto o <div> com o id=myNavbar devem abrir-->
+            <span class="icon-bar"></span> <!-- icon-bar (barra de ícones) : icon-bar (barra de ícones)-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Perter Parker</a> <!--COLOCAR LINK PARA ESSE MESMO SITE - VOLTA NO INÍCIO -->
+		  <!-- navbar-brand: usado para adicionar cor da fonte,
+tamanho, margem, tamanho da fonte e textura ao nome do nosso site-->
+        </div>
+        
+	
+	<div class="collapse navbar-collapse" id="myNavbar"></div> <!-- Ele é usado para manter todos os itens na barra -->
+	<!-- collapse: Ele é usado para manter todos os itens na barra-->
+	<!-- navbar-collapse: É o corpo completo do estilo e amostra dos
+itens do menu. Adicione a cor do plano de fundo e mostre o menu grande quando o
+tamanho da tela for maior que 768px. -->
+<!-- id="myNavbar" é a identificação do div, ele abre o div quando o elemento que possui
+data-target="#myNavbar" é clicado. No momento esse elemento é um botão -->
+	
+	<ul class="nav navbar-nav">
+		<!-- nav navbar-nav - É propriedades bootstrap CSS e nós as usamos chamando-as dentro
+da classe de um elemento. Elas servem tanto para alinhar quanto para estilizar os itens da lista.-->
 		<li class="links"><a href="#welcome">INÍCIO</a></li>
 		<li class="links"><a href="#videos">VÍDEOS</a></li>
 		<li class="links"><a href="#work">TRABALHOS</a></li>
@@ -16,6 +64,9 @@
 		<li class="links"><a href="#contact">CONTATO</a></li>
 
 	</ul>
+	</div>
+    
+</nav>
 
 	<section id="welcome" class="parallax-container">
 		<div class="div-class">
@@ -58,11 +109,13 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-	<section id="work">
+	<section id="work" " style="width: 100%"> <!--Acrescentar " style="width: 100%-->
         <h1>TRABALHOS</h1>
         <div class="line"></div>
-        <iframe width="900" height="1000" src="https://pt.wikipedia.org/wiki/Tim_Berners-Lee#Vida_e_carreira"
-            frameborder="0"></iframe>
+        <iframe class="work_iframe" height="1000" src="https://pt.wikipedia.org/wiki/Tim_Berners-Lee#Vida_e_carreira"
+            frameborder="0" style="width: 80%; margin: 10px;"></iframe> 
+			<!--ACRESCENTAR class="work_iframe", tirar o  width="900", -->
+			<!-- ACRESCENTAR: style="width: 80%; margin: 10px;"-->
     </section>
 
     <section id="writings">
@@ -76,6 +129,30 @@
     </section>
 
 
+	<section id="contact">
+        <h1>CONTATOS</h1>
+        <div class="line"></div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.3520829464787!2d-43.929574785106176!3d-19.95169018659159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6999ed62daafd%3A0x566567081174064b!2sBYJU&#39;S%20FutureSchool!5e0!3m2!1spt-BR!2sbr!4v1634572700786!5m2!1spt-BR!2sbr" 
+        height="450" allowfullscreen="" loading="lazy"></iframe>
+
+        <div class="contact_1">
+
+            <a href="mailto:amandaoornelas@gmail.com?Subject=Hello">
+                <i class="fa fa-envelope"></i>&nbsp;&nbsp;<h3>amandaoornelas@gmail.com</h3>
+            </a> <!-- Usaremos “&nbsp;” para espaçar entre os ícones --> 
+            <!-- <i> com a classe “fa fa-envelope” para usar um ícone para o Gmail.-->
+
+            <br>
+            <br>
+
+            <a href="https://www.instagram.com/ornelasamanda/" target="_blank">
+                <i class="fa fa-instagram"></i>&nbsp;&nbsp;<h3>@ornelasamanda</h3>
+            </a>
+
+        </div>
+
+    </section>
 
 </body>
 
